@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link rel="preload" href="/_next/static/media/24bef5cb7ad4ee10-s.p.woff2" as="font" crossorigin="" type="font/woff2"><link rel="preload" href="/_next/static/media/50ed49ac8149f210-s.p.woff2" as="font" crossorigin="" type="font/woff2"><link rel="preload" href="/_next/static/media/5f452077d4be8793-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="top">
+        <p>Learn SQL</p>
+        <a href="sql.html">SQL playground</a>
+    </div>
+    <header>
+        <br>
+        <div class="navbar">
+            <h1>GUI for SQL</h1>
+            
+        </div>
+       
+        
+        <br><br>
+       
+    </header>
+    <main>
+
+        <div class="box">
+            <form action="" method="post">
+                <h1>Create an account</h1>
+                <br><br>
+                <label for="email">Email Address</label><br><br>
+                <input type="text" id="email" required><br><br>
+
+                <label for="password">Password</label><br><br>
+                <input type="text" id="password" required><br><br><br>
+
+                <input type="submit" value="Create Account" id="btn">
+            </form>
+        </div>
+        <div class="box" id="box2">
+            <p>already a user ? <a href="logIn.html"><b> Log In</b></a></p>
+        </div>
+    </main>
+    <footer>
+        <ol>
+            <li>Terms</li>
+            <li>Privacy</li>
+            <li>Contact support</li>
+            <li>Terms</li>
+            <li>Manage Cookies</li>
+        </ol>
+    </footer>
+
+    <script>
+        
+        const submitBtn = document.querySelector('#btn')
+        submitBtn.addEventListener('click', () => {
+            event.preventDefault();
+
+            const email = document.querySelector('#email').value;
+            const password = document.querySelector('#password').value;
+            console.log(email)
+            fetch('http://localhost:4000', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: email , password:password}), // Data to send in JSON format
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data sent successfully:', data);
+                    if(data.res == 'yes'){
+                        window.location = 'main.html'
+                        
+                    }
+                    else{
+                        alert('Account already exists')
+                    }
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+
+        })
+    </script>
+
+</body>
+
+</html>

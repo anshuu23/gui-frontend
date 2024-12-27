@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Cheatsheet</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+           
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            margin: 40px;
+        }
+        .cheatsheet {
+            max-width: 80vw;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .command {
+            margin-bottom: 40px ;
+        }
+        .command p{
+            margin-bottom: 20px ;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px ;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-left: 5px solid #333;
+            overflow-x: auto;
+        }
+        .top{
+    height: 13vh;
+    background-color: #000000 ;
+    color: #ffffff ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10vh;
+    
+}
+.top a{
+    color: #ffffff ;
+    margin-right: 60px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.top p{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 30px;
+   
+}
+.top a:hover{
+    background-color: #ffffff !important;
+    color: #000000;
+    
+}
+    </style>
+</head>
+<body>
+    <div class="top">
+        <p>Learn SQL</p>
+        <a href="sql.html">SQL playground</a>
+    </div>
+    <h1>SQL Cheatsheet</h1>
+    <div class="cheatsheet">
+        
+        <div class="command">
+            <h2>1. SELECT</h2>
+            <p>Used to retrieve data from a database.</p>
+            <pre>
+SELECT column1, column2 FROM table_name WHERE condition;
+            </pre>
+        </div>
+
+        <div class="command">
+            <h2>2. INSERT</h2>
+            <p>Used to insert new records into a table.</p>
+            <pre>
+INSERT INTO table_name (column1, column2) 
+VALUES (value1, value2);
+            </pre>
+        </div>
+
+        <div class="command">
+            <h2>3. UPDATE</h2>
+            <p>Used to modify existing records in a table.</p>
+            <pre>
+UPDATE table_name
+SET column1 = value1, column2 = value2
+WHERE condition;
+            </pre>
+        </div>
+
+        <div class="command">
+            <h2>4. DELETE</h2>
+            <p>Used to delete records from a table.</p>
+            <pre>
+DELETE FROM table_name WHERE condition;
+            </pre>
+        </div>
+
+        <div class="command">
+            <h2>5. CREATE TABLE</h2>
+            <p>Used to create a new table.</p>
+            <pre>
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype
+);
+            </pre>
+        </div>
+
+        <div class="command">
+            <h2>6. ALTER TABLE</h2>
+            <p>Used to modify an existing table (e.g., add a column).</p>
+            <pre>
+ALTER TABLE table_name
+ADD column_name datatype;
+            </pre>
+        </div>
+
+        <div class="command">
+            <h2>7. DROP TABLE</h2>
+            <p>Used to delete a table and its data.</p>
+            <pre>
+DROP TABLE table_name;
+            </pre>
+        </div>
+
+        <div class="command">
+            <h2>8. JOIN</h2>
+            <p>Used to combine rows from two or more tables based on a related column.</p>
+            <pre>
+SELECT column1, column2 
+FROM table1
+JOIN table2
+ON table1.column_name = table2.column_name;
+            </pre>
+        </div>
+
+        <div class="command">
+            <h2>9. AGGREGATE FUNCTIONS</h2>
+            <p>Used to perform calculations on a set of values.</p>
+            <pre>
+SELECT COUNT(column_name), AVG(column_name), SUM(column_name), MIN(column_name), MAX(column_name)
+FROM table_name
+WHERE condition;
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

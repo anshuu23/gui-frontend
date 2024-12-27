@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #ffffff;
+    color: aliceblue;
+    font-family:  'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/index.png);
+    background-position: -9vw 10vh;
+}
+.box{
+    border: 1px solid #ffffff;
+    max-width: 300px;
+    font-size: 14px;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 0.35rem;
+    background-color: #ffffff4e;
+    color: #ffffff;
+    backdrop-filter: blur(3px);
+}
+h1{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+input{
+    padding: 3px 12px;
+    line-height: 20px;
+    border-radius: 6px;
+    border: 1px solid #3d444db3;
+    
+    color: rgb(0, 0, 0);
+    width: 200px;
+}
+li{
+    font-size: 12px;
+    list-style: none;
+    margin-top: 60px
+}
+ol{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    color: rgb(255, 255, 255);
+}
+#btn{
+    width: 225px;
+    background-color: #ffffff;
+    font-weight: 600;
+   
+    color: #000000;
+}
+#btn:hover{
+    background-color: rgb(174, 174, 174);
+    
+}
+#box2{
+    padding: 10px 0vw 10px 4vw;
+}
+b{
+    color:#4493f8 ;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+#btn , b , li {
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.top{
+    height: 13vh;
+    background-color: #fff ;
+    color: #000000 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+.top a{
+    color: #000000 ;
+    margin-right: 60px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.top p{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 30px;
+   
+}
+.top a:hover{
+    background-color: #000000 !important;
+    color: #fff;
+    text-decoration: none;
+}
+.navbar h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form h1{
+    font-weight: 600;
+    text-align: center;
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+    <div class="top">
+        <p>Learn SQL</p>
+        <a href="sql.html">SQL playground</a>
+    </div>
+   
+    <h1 id="headh1">Sql Guide</h1>
+    <div class="box">
+        <h1>1. What is SQL?</h1>
+        <p>
+            SQL (Structured Query Language) is a standardized programming language used to manage and manipulate relational databases. SQL allows users to perform various operations on the data stored in databases, such as querying data, inserting new records, updating records, and deleting records. It is the backbone of any database management system (DBMS) and is used in almost all modern relational databases.
+            <br><br>
+            SQL is essential because it provides a clear, human-readable way to interact with databases, making it easy to organize, retrieve, and manage data.
+
+        </p>
+    </div>
+  
+    <div class="box">
+        <h1> Importance of SQL in Database Management</h1>
+        <p>
+            SQL is crucial for database management for the following reasons:
+            <br><br>
+            Data Retrieval: SQL allows users to query the database and fetch the exact data they need using commands like SELECT.<br><br>
+            Data Modification: It helps in inserting (INSERT), updating (UPDATE), and deleting (DELETE) records in the database.<br><br>
+            Database Administration: SQL helps in creating, modifying, and managing databases and tables using commands like CREATE, ALTER, and DROP.<br><br>
+            Data Integrity: It helps ensure data integrity and accuracy through constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK.<br><br>
+            Data Security: SQL allows assigning different access rights to users and maintaining security through authorization commands such as GRANT and REVOKE.<br><br>
+            Cross-Platform: SQL works with various database systems (MySQL, PostgreSQL, Oracle, MS SQL Server), making it a universal language for data management.<br><br>
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> Basic Structure of an SQL Query</h1>
+        <p>
+            SQL queries typically follow a structured pattern of commands. Here’s the basic structure:
+            <br><br>
+           
+           
+            SELECT column1, column2, ...<br>
+            FROM table_name<br>
+            WHERE condition;<br><br>
+            Breakdown:<br><br>
+            
+            SELECT: Specifies the columns you want to retrieve from the database.<br>
+            FROM: Indicates the table where the data resides.<br>
+            WHERE: Applies conditions or filters to the query.<br>
+            Example:<br>
+            
+            sql<br>
+            Copy code<br>
+            SELECT name, age<br>
+            FROM students<br>
+            WHERE age > 18;<br>
+            This query selects the name and age columns from the students table where the age is greater than 18.
+            <br>
+            Other common SQL clauses include:
+            <br>
+            <br>GROUP BY: Groups the data based on one or more columns.
+            <br>ORDER BY: Sorts the result set.
+            <br>JOIN: Combines rows from two or more tables based on a related column.
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> SQL Basics</h1>
+        <h1> SELECT</h1>
+        <p>
+            The SELECT statement is used to fetch data from one or more columns of a table. It is the most commonly used command in SQL.
+            <br><br>
+            Syntax:
+            <br>
+            sql<br>
+            Copy code<br>
+            SELECT column1, column2<br> 
+            FROM table_name;<br><br>
+            Example:<br>
+            
+            
+            SELECT name, age<br> 
+            FROM students;<br>
+            This query will retrieve the name and age columns from the students table.
+            
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> Using SELECT * to Retrieve All Columns</h1>
+        <p>
+            To retrieve all columns from a table, you can use the * wildcard with the SELECT statement.
+            <br><br>
+            Syntax:<br>
+            <br>
+           
+            SELECT * <br>
+            FROM table_name;<br><br>
+            Example:<br>
+            
+
+            <br>SELECT * 
+            <br>FROM students;
+            <br>This query will return all columns from the students table.
+        </p>
+    </div>
+    <div class="box">
+        <h1> WHERE: Filtering Records</h1>
+        <p>
+            The WHERE clause is used to filter records based on a specified condition. It is often used with SELECT, UPDATE, DELETE, and other SQL statements.
+            <br><br>
+            Syntax:<br>
+            
+           
+            SELECT column1<br> 
+            FROM table_name <br>
+            WHERE condition;<br><br>
+            Example:<br>
+            
+           
+            SELECT name<br> 
+            FROM students <br>
+            WHERE age > 18;<br>
+            This query retrieves the name of students whose age is greater than 18.
+        </p>
+    </div>
+    <div class="box">
+        <h1>DISTINCT: Retrieving Unique Values</h1>
+        <p>
+           
+2. SQL Basics<br><br>
+Here’s an introduction to some of the fundamental SQL commands that are used frequently in database operations:
+<br><br>
+1. SELECT: Retrieving Data from a Table<br>
+The SELECT statement is used to fetch data from one or more columns of a table. It is the most commonly used command in SQL.
+<br><br>
+Syntax:<br>
+
+
+SELECT column1, column2 <br>
+FROM table_name;<br>
+Example:<br>
+<br>
+
+SELECT name, age <br>
+FROM students;<br>
+This query will retrieve the name and age columns from the students table.
+<br>
+2. Using SELECT * to Retrieve All Columns<br>
+To retrieve all columns from a table, you can use the * wildcard with the SELECT statement.
+<br><br>
+Syntax:<br>
+
+
+SELECT * <br>
+FROM table_name;<br><br>
+Example:<br>
+
+
+SELECT * <br>
+FROM students;<br>
+This query will return all columns from the students table.<br><br>
+
+3. WHERE: Filtering Records<br>
+The WHERE clause is used to filter records based on a specified condition. It is often used with SELECT, UPDATE, DELETE, and other SQL statements.
+<br><br>
+Syntax:<br>
+
+
+SELECT column1 <br>
+FROM table_name <br>
+WHERE condition;<br><br>
+Example:<br>
+
+SELECT name <br>
+FROM students <br>
+WHERE age > 18;<br>
+This query retrieves the name of students whose age is greater than 18.
+<br><br>
+4. DISTINCT: Retrieving Unique Values<br>
+The DISTINCT keyword is used to return only unique (non-duplicate) values from a column.<br><br>
+
+Syntax:<br>
+
+
+SELECT DISTINCT column1 <br>
+FROM table_name;<br><br>
+Example:<br>
+
+SELECT DISTINCT age<br> 
+FROM students;<br>
+This query returns unique ages from the students table, removing any duplicates.<br>
+        </p>
+    </div>
+    <div class="box">
+        <h1>ORDER BY: Sorting Results</h1>
+        <p>
+            The ORDER BY clause is used to sort the result set in either ascending (ASC) or descending (DESC) order.
+            <br><br>
+            Syntax:<br>
+            
+            SELECT column1 <br>
+            FROM table_name <br>
+            ORDER BY column1 ASC|DESC;<br><br>
+            Example:<br>
+            
+            SELECT name, age<br> 
+            FROM students <br>
+            ORDER BY age DESC;<br>
+        </p>
+    </div>
+    <div class="box">
+        <h1>  LIMIT: Limiting the Number of Results</h1>
+        <p>
+            The LIMIT clause is used to specify the number of rows to return. It’s useful when you want to restrict the result set to a certain number.
+            <br><br>
+            Syntax:<br>
+            
+            SELECT column1<br> 
+            FROM table_name <br>
+            LIMIT number;<br><br>
+            Example:<br>
+            
+            SELECT *<br> 
+            FROM students<br> 
+            LIMIT 5;<br>
+            This query retrieves the first 5 rows from the students table.<br>
+        </p>
+    </div>
+    <div class="box">
+        <h1> Importance of SQL in Database Management</h1>
+        <p>
+            SQL is crucial for database management for the following reasons:
+
+            Data Retrieval: SQL allows users to query the database and fetch the exact data they need using commands like SELECT.
+            Data Modification: It helps in inserting (INSERT), updating (UPDATE), and deleting (DELETE) records in the database.
+            Database Administration: SQL helps in creating, modifying, and managing databases and tables using commands like CREATE, ALTER, and DROP.
+            Data Integrity: It helps ensure data integrity and accuracy through constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK.
+            Data Security: SQL allows assigning different access rights to users and maintaining security through authorization commands such as GRANT and REVOKE.
+            Cross-Platform: SQL works with various database systems (MySQL, PostgreSQL, Oracle, MS SQL Server), making it a universal language for data management.
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> Importance of SQL in Database Management</h1>
+        <p>
+            SQL is crucial for database management for the following reasons:
+
+            Data Retrieval: SQL allows users to query the database and fetch the exact data they need using commands like SELECT.
+            Data Modification: It helps in inserting (INSERT), updating (UPDATE), and deleting (DELETE) records in the database.
+            Database Administration: SQL helps in creating, modifying, and managing databases and tables using commands like CREATE, ALTER, and DROP.
+            Data Integrity: It helps ensure data integrity and accuracy through constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK.
+            Data Security: SQL allows assigning different access rights to users and maintaining security through authorization commands such as GRANT and REVOKE.
+            Cross-Platform: SQL works with various database systems (MySQL, PostgreSQL, Oracle, MS SQL Server), making it a universal language for data management.
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> Importance of SQL in Database Management</h1>
+        <p>
+            SQL is crucial for database management for the following reasons:
+
+            Data Retrieval: SQL allows users to query the database and fetch the exact data they need using commands like SELECT.
+            Data Modification: It helps in inserting (INSERT), updating (UPDATE), and deleting (DELETE) records in the database.
+            Database Administration: SQL helps in creating, modifying, and managing databases and tables using commands like CREATE, ALTER, and DROP.
+            Data Integrity: It helps ensure data integrity and accuracy through constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK.
+            Data Security: SQL allows assigning different access rights to users and maintaining security through authorization commands such as GRANT and REVOKE.
+            Cross-Platform: SQL works with various database systems (MySQL, PostgreSQL, Oracle, MS SQL Server), making it a universal language for data management.
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> Importance of SQL in Database Management</h1>
+        <p>
+            SQL is crucial for database management for the following reasons:
+
+            Data Retrieval: SQL allows users to query the database and fetch the exact data they need using commands like SELECT.
+            Data Modification: It helps in inserting (INSERT), updating (UPDATE), and deleting (DELETE) records in the database.
+            Database Administration: SQL helps in creating, modifying, and managing databases and tables using commands like CREATE, ALTER, and DROP.
+            Data Integrity: It helps ensure data integrity and accuracy through constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK.
+            Data Security: SQL allows assigning different access rights to users and maintaining security through authorization commands such as GRANT and REVOKE.
+            Cross-Platform: SQL works with various database systems (MySQL, PostgreSQL, Oracle, MS SQL Server), making it a universal language for data management.
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> Importance of SQL in Database Management</h1>
+        <p>
+            SQL is crucial for database management for the following reasons:
+
+            Data Retrieval: SQL allows users to query the database and fetch the exact data they need using commands like SELECT.
+            Data Modification: It helps in inserting (INSERT), updating (UPDATE), and deleting (DELETE) records in the database.
+            Database Administration: SQL helps in creating, modifying, and managing databases and tables using commands like CREATE, ALTER, and DROP.
+            Data Integrity: It helps ensure data integrity and accuracy through constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK.
+            Data Security: SQL allows assigning different access rights to users and maintaining security through authorization commands such as GRANT and REVOKE.
+            Cross-Platform: SQL works with various database systems (MySQL, PostgreSQL, Oracle, MS SQL Server), making it a universal language for data management.
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> Importance of SQL in Database Management</h1>
+        <p>
+            SQL is crucial for database management for the following reasons:
+
+            Data Retrieval: SQL allows users to query the database and fetch the exact data they need using commands like SELECT.
+            Data Modification: It helps in inserting (INSERT), updating (UPDATE), and deleting (DELETE) records in the database.
+            Database Administration: SQL helps in creating, modifying, and managing databases and tables using commands like CREATE, ALTER, and DROP.
+            Data Integrity: It helps ensure data integrity and accuracy through constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK.
+            Data Security: SQL allows assigning different access rights to users and maintaining security through authorization commands such as GRANT and REVOKE.
+            Cross-Platform: SQL works with various database systems (MySQL, PostgreSQL, Oracle, MS SQL Server), making it a universal language for data management.
+            
+        </p>
+    </div>
+    <div class="box">
+        <h1> Importance of SQL in Database Management</h1>
+        <p>
+            SQL is crucial for database management for the following reasons:
+
+            Data Retrieval: SQL allows users to query the database and fetch the exact data they need using commands like SELECT.
+            Data Modification: It helps in inserting (INSERT), updating (UPDATE), and deleting (DELETE) records in the database.
+            Database Administration: SQL helps in creating, modifying, and managing databases and tables using commands like CREATE, ALTER, and DROP.
+            Data Integrity: It helps ensure data integrity and accuracy through constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK.
+            Data Security: SQL allows assigning different access rights to users and maintaining security through authorization commands such as GRANT and REVOKE.
+            Cross-Platform: SQL works with various database systems (MySQL, PostgreSQL, Oracle, MS SQL Server), making it a universal language for data management.
+            
+        </p>
+    </div>
+
+</body>
+</html>
