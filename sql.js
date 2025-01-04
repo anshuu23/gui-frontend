@@ -7,7 +7,7 @@ function btnClicked(){
     prevQuerry.scrollTop = prevQuerry.scrollHeight;
    
 
-    fetch('http://localhost:4000/sql', {
+    fetch('https://learnsql-5vx7.onrender.com/sql', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
