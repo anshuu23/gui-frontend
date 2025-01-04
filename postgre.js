@@ -8,7 +8,7 @@ function btnClicked(){
     prevQuerry.scrollTop = prevQuerry.scrollHeight;
     loader.style.display='block';
 
-    fetch('http://localhost:4000/postgre', {
+    fetch('https://learnsql-5vx7.onrender.com/postgre', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
